@@ -1,0 +1,15 @@
+# Do not include certificate files
+*.crt
+*.cer
+*.csr
+*.key
+*.pem
+*.pfx
+*.p12
+*.srl
+*.old
+*.req
+*.
+*.crl
+*.txt
+*.attr
