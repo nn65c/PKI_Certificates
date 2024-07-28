@@ -84,11 +84,6 @@ Den private nøkkelen ligger lokalt på maskinen. Dette vises med **You have a p
 
 Filen som ble lagret er i et standard format som kan sendes til CA for signering. Dvs. signeringen gjøres ikke på samme maskin som CSR blir generert. Filen kan trygt sendes f.eks. som epost. **Private key** eksponeres ikke.
 
-![alt text](<image/15 CSR Exported file.png>)
-
-- [OpenSSL - Eksempel Root CA](../../RootCA/OpenSSL_New_RootCA/README.md)
-- [OpenSSL - Signere CSR](../../RootCA/OpenSSL_Sign_CSR/README.md)
-
 ## Importer signert sertifikat
 
 Etter at CSR er sendt til CA og denne har returnert et signert sertifikat, kan dette installeres på maksinen som laget CSR. Da vil sertifikatet knyttes sammen med **private key** som allerede ligger i **Certificate store**.
@@ -126,8 +121,6 @@ Plasser sertifikat i **Local Machine**.
 Velg manuell plassering til **Trusted Root Certification Authorities**.
 
 ![alt text](<image/22 RootCA import, Trusted Root Certification Authorities.png>)
-
-- [OpenSSL - Distribuere Root CA](../../RootCA/OpenSSL_MinimalCA/README.md#Distribusjon-av-Root-CA)
 
 ## Verifiser signert sertifikat
 
