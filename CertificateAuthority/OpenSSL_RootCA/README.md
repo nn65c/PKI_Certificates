@@ -5,7 +5,7 @@ Eksempel på oppsett for Root CA der OpenSSL har oversikt over alle sertifikater
 ## [Opprette Root CA](rootca_new.ps1)
 Lager **private key** og **public certificate** for Root CA som kan brukes til å signere **Certificate Signing Request** fra annen enhet. Dette kan være CA (Subordinate/Intermediate) eller End-entity (Server, Client, Code Signing...).
 
-**Public certificate** som opprettes må installeres i "Trusted Root Certification Authorities" i "Certificate store" på alle maskiner som skal benytte dette Root CA.
+**Public certificate** som opprettes må installeres i "Trusted Root Certification Authorities" i "Certificate store" på alle maskiner som skal benytte sertifikater signert av denne Root CA.
 
 For "Current User":
 
