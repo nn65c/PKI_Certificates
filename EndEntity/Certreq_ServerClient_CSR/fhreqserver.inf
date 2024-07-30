@@ -1,0 +1,35 @@
+[NewRequest]
+Subject = "CN=servername, O=nn65c"
+FriendlyName = "Server, servername.domain.net"
+KeySpec = 1
+KeyLength = 3072
+; Exportable. Private key exportable (TRUE) or not (FALSE). Default is FALSE
+;Exportable = TRUE
+; MachineKeySet. LocalMachine (TRUE) or CurrentUser (FALSE). Default is FALSE
+;MachineKeySet = TRUE
+ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+ProviderType = 12
+RequestType = PKCS10
+HashAlgorithm = sha256
+; KeyUsage. 0xA8 = digitalSignature, keyEncipherment, keyAgreement
+KeyUsage = 0xA8
+SMIME = FALSE
+;PrivateKeyArchive = FALSE
+;UseExistingKeySet = FALSE
+
+[EnhancedKeyUsageExtension]
+; Server Authentication
+OID=1.3.6.1.5.5.7.3.1 
+; Client Authentication
+OID=1.3.6.1.5.5.7.3.2 
+
+[Extensions]
+2.5.29.19 = "{critical}{text}CA=FALSE"
+
+2.5.29.17 = "{text}dns=servername&dns=servername.domain.net&ipaddress=192.168.17.50"
+
+; Or, same on multiple lines. 
+;2.5.29.17 = "{text}"
+;_continue_ = "dns=servername&"
+;_continue_ = "dns=servername.domain.net&"
+;_continue_ = "ipaddress=192.168.17.50"
