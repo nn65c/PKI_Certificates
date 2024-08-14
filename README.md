@@ -30,7 +30,7 @@ CA er en part som "går god for" informasjon i et sertifikat ved å signere dett
 ### Intermediate/Subordinate CA
 Det kan lages en struktur med underliggende CA sertifikater (Sub CA) for å delegere funksjonen med å signere sertifikater. Dette vil gi en trestruktur der sertifikater er koblet sammen i en kjede med overliggende sertifikat som har signert underliggende. 
 
-### [Root CA](CertificateAuthority/OpenSSL_RootCA/README.md)
+### [Root CA](CertificateAuthority/README.md)
 Denne kjeden ender opp i et sertifikat som har signert seg selv (self-signed), som kalles Root CA. 
 
 For godkjenning av End-entity sertifikat, må man ha tilgang til hele kjeden opp til Root CA. Normalt er det bare Root CA som distribueres rundt. End-entity vil kjede sammen sitt eget og alle Sub CA sertifikater opp til Root CA. Bruker har sin lokale kopi av Root CA sertifikat, og kjeden blir derfor komplett.
